@@ -1,0 +1,307 @@
+:root {
+    --border-color: #e6e6e6;
+    --black: #151515;
+    --red: #d0021b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    background: none;
+    border: none;
+    font-family: "Visuelt Pro Medium";
+    src: url("./fonts/VisueltPro-Medium.ttf");
+    text-decoration: none;
+    color: var(--black);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+}
+
+.brands-bar {
+    width: calc(100% - 44px);
+    height: 42px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 22px;
+    position: relative;
+}
+
+.brands-bar .wrap-links {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+}
+
+.brands-bar .wrap-links a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 22px;
+}
+
+.brands-bar .wrap-links a:first-child {
+    margin: 0;
+}
+
+.brands-bar .wrap-links a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.brands-bar .wrap-links a.nsfw p {
+    background: var(--black);
+    color: white;
+    font-size: 10px;
+    height: 8px;
+    padding: 5px 5px 4px 5px;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+.brands-bar .shipping {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.brands-bar .shipping p {
+    font-size: 12px;
+    word-spacing: 0.15em;
+    margin-top: 2px;
+}
+
+.brands-bar .shipping .circle {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    margin-top: -2px;
+    margin-left: 8px;
+    overflow: hidden;
+}
+
+nav {
+    width: calc(100% - 44px);
+    height: 55px;
+    padding: 0 22px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+nav .logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+nav .navigation {
+    margin: 0 auto;
+}
+
+nav .navigation a {
+    font-size: 12px;
+    margin-right: 25px;
+    padding: 0 8px;
+}
+
+nav .navigation a.sale {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+nav .navigation a:hover {
+    text-decoration: underline;
+}
+
+nav .wrap-btns {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav .wrap-btns button {
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .wrap-btns button * {
+    cursor: pointer;
+}
+
+nav .wrap-btns button:last-child {
+    margin: 0;
+}
+
+nav .wrap-btns button:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+main {
+    width: 100%;
+}
+
+.collection-header {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.collection-header label {
+    display: block;
+    font-size: 38px;
+    margin-bottom: 10px;
+    font-family: "Visuelt Pro Black";
+    src: url("./fonts/VisueltPro-Black.ttf");
+}
+
+.collection-header .sublabel {
+    width: 510px;
+    display: block;
+    text-align: center;
+    line-height: 1.7em;
+    color: gray;
+    font-size: 14px;
+    font-family: "Visuelt Pro Regular";
+    src: url("./fonts/VisueltPro-Regular.ttf");
+}
+
+.thumbnails {
+    width: fit-content;
+    max-width: 100vw;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(337px, 1fr));
+}
+
+.thumbnails .product {
+    width: 337px;
+    height: 400px;
+    outline: 1px solid var(--border-color);
+    padding-top: 6px;
+}
+
+.thumbnails .product .poster {
+    width: calc(100% - 12px);
+    height: 325px;
+    background: lightgray;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.thumbnails .product .poster img {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.thumbnails .product .sale-message {
+    width: fit-content;
+    font-size: 11px;
+    word-spacing: 0.12em;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    color: var(--red);
+}
+
+.thumbnails .product .name {
+    width: fit-content;
+    max-width: calc(100% - 40px);
+    margin: 0 auto 3px auto;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.thumbnails .product .price {
+    width: fit-content;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.thumbnails .product .price .list-price {
+    margin-right: 10px;
+}
+
+.thumbnails .product .price .list-price.discounted {
+    text-decoration: line-through;
+}
+
+.thumbnails .product .price .sale-price {
+    color: var(--red);
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: var(--black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
